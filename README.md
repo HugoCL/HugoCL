@@ -1,16 +1,13 @@
-### Hi there 👋
+<p align="center">
+  <img src="https://media-exp1.licdn.com/dms/image/C4E16AQFU8Yo0oXnCsA/profile-displaybackgroundimage-shrink_200_800/0/1629413268369?e=1637193600&v=beta&t=nYZbSzW7wpWrG9ZaSksBl5D72jPK4bpvHz_mqXTvxhk"/>
+</p>
 
-<!--
-**HugoCL/HugoCL** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Hugo Castro -- @HugoCL 
+Hi :wave:, I'm Hugo Castro, a fourth year Computer Engineering student at Universidad de Talca, Chile. I'm currently working as a DevOps and Backend Engineer at Hablaquí, a startup where we are building a SaaS app to help psychologists and patients connect in a private and safe space.
 
-Here are some ideas to get you started:
+I enjoy coding in Python and Java, my strongest languages. Recently I have been learning JavaScript and Node.js as part of my Backend Developer Job. I'm also interested in technologies such as Cloud and AI/ML.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Let's connect
+
+ - Connect with me on [LinkedIn](https://www.linkedin.com/in/hugocastrocl/)
+ - Email me at [hugomaximilianocl@gmail.com](hugomaximilianocl@gmail.com)
