@@ -10,4 +10,4 @@ I enjoy coding in Python and Java, my strongest languages. Recently I have been 
 ## Let's connect
 
  - Connect with me on [LinkedIn](https://www.linkedin.com/in/hugocastrocl/)
- - Email me at [hugomaximilianocl@gmail.com](mailto:hugomaximilianocl@gmail.com)
+ - Email me at [hugomaximilianocl@gmail.com](mailto:hugomaximilianocl@gmail.com) or at [hugo@hablaqui.com](mailto:hugo@hablaqui.com) for Hablaquí related matters.
