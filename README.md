@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://media-exp1.licdn.com/dms/image/C4E16AQFU8Yo0oXnCsA/profile-displaybackgroundimage-shrink_200_800/0/1629413268369?e=1637193600&v=beta&t=nYZbSzW7wpWrG9ZaSksBl5D72jPK4bpvHz_mqXTvxhk"/>
+  <img src="https://user-images.githubusercontent.com/39707889/139371485-2c880ed9-f286-4dcc-a223-d3fcdf3df174.png"/>
 </p>
 
 # Hugo Castro -- @HugoCL 
