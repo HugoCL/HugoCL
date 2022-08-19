@@ -3,7 +3,7 @@
 </p>
 
 # Hugo Castro -- @HugoCL 
-Hi :wave:, I'm Hugo Castro, a fourth year Computer Engineering student at Universidad de Talca, Chile. I'm currently Hablaquí's CTO, a startup where we are building a SaaS app to help psychologists and patients connect in a private and safe space.
+Hi :wave:, I'm Hugo Castro, a fifth year Computer Engineering student at Universidad de Talca, Chile. I'm currently Hablaquí's CTO, a startup where we are building a SaaS app to help psychologists and patients connect in a private and safe space.
 
 I enjoy coding in Python and Java, my strongest languages. Recently I have been learning JavaScript and Node.js as part of my Backend Developer Job. I'm also interested in technologies such as Cloud and AI/ML.
 
