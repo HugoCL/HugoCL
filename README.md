@@ -2,10 +2,6 @@
   <img src="https://user-images.githubusercontent.com/39707889/139371485-2c880ed9-f286-4dcc-a223-d3fcdf3df174.png"/>
 </p>
 
-# 💫 About Me:
-Hi 👋, I'm Hugo Castro, a Computer Engineer from Talca, Chile. I'm currently a Lead Software Engineer at Universidad de Talca's i3 (Interdisciplinary Research Institute), where I'm leading the development of a platform that will increase the productivity of agriculture using innovative technologies.<br><br>I enjoy coding in Python and JavaScript/TypeScript, my strongest languages. Recently I have been learning Flutter/Dart as a personal and professional challenge. I'm also interested in technologies such as Cloud and AI/ML.
-
-
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/hugocastrocl) 
 
