@@ -267,7 +267,7 @@ const piezas = {
 const imagen = (pieza, alt, atributos = 'width="100%"') =>
   `<picture><source media="(prefers-color-scheme: dark)" srcset="assets/${pieza}.dark.svg"><img src="assets/${pieza}.light.svg" alt="${alt}" ${atributos}></picture>`;
 
-const alto = 'height="60"';
+const alto = 'height="48"';
 
 const readme = `<!-- Generado por scripts/gen.mjs: edita el contenido ahí y corre \`pnpm gen\`. -->
 

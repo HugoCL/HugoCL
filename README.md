@@ -6,7 +6,7 @@ I build web apps with Next.js, Convex and TypeScript.
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/things-i-build.dark.svg"><img src="assets/things-i-build.light.svg" alt="Things I build." height="60"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/things-i-build.dark.svg"><img src="assets/things-i-build.light.svg" alt="Things I build." height="48"></picture>
 
 <p>
 <a href="https://go.hugocastro.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/app-go.dark.svg"><img src="assets/app-go.light.svg" alt="go. A URL shortener and public link pages." width="49%"></picture></a>
@@ -19,7 +19,7 @@ I build web apps with Next.js, Convex and TypeScript.
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/open-source.dark.svg"><img src="assets/open-source.light.svg" alt="Open source." height="60"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/open-source.dark.svg"><img src="assets/open-source.light.svg" alt="Open source." height="48"></picture>
 
 - **[round-robin-rmpe](https://github.com/HugoCL/round-robin-rmpe)**: round-robin pull request reviewer assignment for teams, with availability tracking and Google Chat notifications. [Demo](https://round-robin-rmpe-demo.vercel.app/)
 - **[que-maldito-modelo-uso](https://github.com/HugoCL/que-maldito-modelo-uso)**: which AI model to use for coding, in three answers, from public benchmarks and real cost per task. [qmmu.hugocastro.dev](https://qmmu.hugocastro.dev)
@@ -30,7 +30,7 @@ I build web apps with Next.js, Convex and TypeScript.
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/lets-talk.dark.svg"><img src="assets/lets-talk.light.svg" alt="Let's talk." height="60"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/lets-talk.dark.svg"><img src="assets/lets-talk.light.svg" alt="Let's talk." height="48"></picture>
 
 [hugocastro.dev](https://hugocastro.dev) · [LinkedIn](https://www.linkedin.com/in/hugocastrocl)
 
