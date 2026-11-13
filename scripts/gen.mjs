@@ -5,7 +5,7 @@
 // texto se contornea con harfbuzz (Spline Sans variable, OFL, en scripts/fonts).
 // Los valores son los de Punto (design/punto/tokens.json en hc-monorepo).
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync } from "node:fs";
 import hbInit from "harfbuzzjs";
 
 const hb = await hbInit;
@@ -52,25 +52,31 @@ function componer(texto, tamano, { fuente, peso, tracking }) {
 const n = (v) => +v.toFixed(2);
 
 /** Los glifos como <path>, con la línea base en (x, y). */
-function trazar(glifos, x, y, atributos = () => "") {
+function trazar(glifos, x, y, atributos) {
   return glifos
-    .map((g, i) => (g.d ? `<path${atributos(i)} transform="translate(${n(x + g.x)} ${n(y)}) scale(${n(g.escala * 1e4) / 1e4} ${-n(g.escala * 1e4) / 1e4})" d="${g.d}"/>` : ""))
+    .map((g, i) => {
+      if (!g.d) return "";
+      const path = `<path transform="translate(${n(x + g.x)} ${n(y)}) scale(${n(g.escala * 1e4) / 1e4} ${-n(g.escala * 1e4) / 1e4})" d="${g.d}"/>`;
+      return atributos ? `<g${atributos(i)}>${path}</g>` : path;
+    })
     .join("");
 }
+
+const escapar = (texto) => texto.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 /** Un título de Punto: el texto en `texto` y el punto final en `acento`. */
 function titulo(texto, tamano, x, y, t, { clase = "", estilo = display } = {}) {
   const linea = componer(`${texto}.`, tamano, estilo);
   const punto = linea.glifos.length - 1;
   const cuerpo = trazar(linea.glifos.slice(0, punto), x, y, (i) => ` style="--i:${i}"`);
-  const final = trazar(linea.glifos.slice(punto), x, y);
+  const final = trazar(linea.glifos.slice(punto), x, y, () => ` style="--i:${punto}"`);
   return { svg: `<g fill="${t.texto}" class="${clase}">${cuerpo}</g><g class="punto" fill="${t.acento}">${final}</g>`, ancho: linea.ancho };
 }
 
 const quieto = "@media (prefers-reduced-motion: reduce) { *, *::before { animation: none !important; } }";
 
 function svg(ancho, alto, etiqueta, estilo, cuerpo) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${ancho}" height="${alto}" viewBox="0 0 ${ancho} ${alto}" role="img" aria-label="${etiqueta}"><style>${estilo} ${quieto}</style>${cuerpo}</svg>\n`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${ancho}" height="${alto}" viewBox="0 0 ${ancho} ${alto}" role="img" aria-label="${escapar(etiqueta)}"><style>${estilo} ${quieto}</style>${cuerpo}</svg>\n`;
 }
 
 // El campo del hero: el glifo de la mano en puntos (la máscara `web` de @hc/og)
@@ -145,7 +151,7 @@ function hero(t, contenido) {
   const nombre = titulo(contenido.nombre, 112, x, 258, t, { clase: "nombre" });
   const dato = componer(contenido.dato, 28, datos);
   const estilo = `
-    .nombre path, .punto path { animation: subir 600ms ${curva} both; animation-delay: calc(var(--i, 11) * 40ms); }
+    .nombre > g, .punto > g { animation: subir 600ms ${curva} both; animation-delay: calc(var(--i) * 40ms); }
     .datos { animation: subir 600ms ${curva} 700ms both; }
     .rejilla { animation: aparecer 900ms ${curva} both; }
     .estalla { transform-box: fill-box; transform-origin: center; animation: estallar 600ms ${curva} 900ms both; }
@@ -265,7 +271,7 @@ const piezas = {
 };
 
 const imagen = (pieza, alt, atributos = 'width="100%"') =>
-  `<picture><source media="(prefers-color-scheme: dark)" srcset="assets/${pieza}.dark.svg"><img src="assets/${pieza}.light.svg" alt="${alt}" ${atributos}></picture>`;
+  `<picture><source media="(prefers-color-scheme: dark)" srcset="assets/${pieza}.dark.svg"><img src="assets/${pieza}.light.svg" alt="${escapar(alt)}" ${atributos}></picture>`;
 
 const alto = 'height="48"';
 
@@ -318,6 +324,12 @@ for (const [ruta, texto] of Object.entries(archivos)) {
   if (actual === texto) continue;
   if (comprobar) viejos.push(ruta);
   else writeFileSync(url, texto);
+}
+for (const archivo of readdirSync(new URL("assets/", raiz))) {
+  const ruta = `assets/${archivo}`;
+  if (ruta in archivos) continue;
+  if (comprobar) viejos.push(ruta);
+  else rmSync(new URL(ruta, raiz));
 }
 if (viejos.length) {
   console.error(`Quedaron viejos; corre \`pnpm gen\`:\n${viejos.join("\n")}`);
